@@ -38,7 +38,7 @@ public class Controller {
     @FXML
     private Label wordCountLabel;
     //------------------------ Base64 Encoder ---------------------------
-    void convertButtonClicked() {
+    public void convertButtonClicked() {
         if (labelText.getText().equals("Base64 to Text")) {
             textArea.setText(base64Decode(textArea.getText()));
         } else {
@@ -63,7 +63,7 @@ public class Controller {
         byte[] bytes = Base64.getDecoder().decode(base64Text);
         return new String(bytes);
     }
-    void checkBoxClicked() {
+    public void checkBoxClicked() {
         if (checkBox.isSelected()) {
             labelText.setText("Base64 to Text");
         } else {
@@ -71,12 +71,12 @@ public class Controller {
         }
     }
     //------------------------ Web Browser ------------------------
-    void searchWithEnter(KeyEvent keyEvent) {
+    public void searchWithEnter(KeyEvent keyEvent) {
         if (keyEvent.getCode() == KeyCode.ENTER) {
             searchButtonClick();
         }
     }
-    void searchButtonClick() {
+    public void searchButtonClick() {
         String url = adressBar.getText();
         webView.getEngine().load(search(url));
     }
@@ -94,7 +94,7 @@ public class Controller {
         return url;
     }
     //------------------------ Text Editor -------------------------
-    void loadFileButtonPressed() throws FileNotFoundException {
+    public void loadFileButtonPressed() throws FileNotFoundException {
         String path = textFieldFilePath.getText();
         textEditorArea.setText("");
         textEditorArea.setText(loadFile(path));
@@ -117,7 +117,7 @@ public class Controller {
         System.out.println(loadedText);
         return loadedText.toString();
     }
-    void saveToFileButtonPressed() throws IOException {
+    public void saveToFileButtonPressed() throws IOException {
         String path = textFieldFilePath.getText();
         String text = textEditorArea.getText();
         saveToFile(path,text);
@@ -127,12 +127,12 @@ public class Controller {
      * @param path The path of the file that will be saved to
      * @param text The string that will be saved to the file
      */
-    static void saveToFile(String path, String text) throws IOException {  // TODO skriv test
+    static void saveToFile(String path, String text) throws IOException {
         FileWriter fileWriter = new FileWriter(path);
         fileWriter.write(text);
         fileWriter.close();
     }
-    void updateWordCount(){
+    public void updateWordCount(){
         String text = textEditorArea.getText();
         wordCountLabel.setText("Word count: " + wordCounter(text));
     }
