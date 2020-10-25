@@ -151,13 +151,13 @@ public class Controller {
         return wordCount;
     }
     //------------------------ Launcher ----------------------------
-    void webBrowserButtonClicked() throws IOException {
+    public void webBrowserButtonClicked() throws IOException {
         newStage("webBrowser.fxml","Web Browser",1200,700);
     }
-    void textEditorButtonClicked() throws IOException {
+    public void textEditorButtonClicked() throws IOException {
         newStage("textEditor.fxml","Text Editor",900,600);
     }
-    void base64ConverterButtonClicked() throws IOException {
+    public void base64ConverterButtonClicked() throws IOException {
         newStage("base64Converter.fxml","Base64 Converter",900,600);
     }
     /**
