@@ -50,7 +50,7 @@ public class Controller {
      * @param text A string in plain text
      * @return A string encoded in base64
      */
-    static String base64Encode(String text){
+    String base64Encode(String text){
         byte[] bytes = text.getBytes();
         return Base64.getEncoder().encodeToString(bytes);
     }
@@ -59,7 +59,7 @@ public class Controller {
      * @param base64Text A string encoded in base64
      * @return A string in plain text
      */
-    static String base64Decode(String base64Text){
+    String base64Decode(String base64Text){
         byte[] bytes = Base64.getDecoder().decode(base64Text);
         return new String(bytes);
     }
@@ -85,7 +85,7 @@ public class Controller {
      * @param url The string
      * @return  The usable url
      */
-    static String search(String url){
+    String search(String url){
         if (!url.contains(".") || url.endsWith(".")) {
             url = "https://www.bing.com/search?q=" + url;
         } else if (!url.startsWith("https://")) {
@@ -105,7 +105,7 @@ public class Controller {
      * @param path The path of the file that will be loaded from
      * @return The loaded string
      */
-    static String loadFile(String path) throws FileNotFoundException {
+    String loadFile(String path) throws FileNotFoundException {
         File file = new File(path);
         StringBuilder loadedText = new StringBuilder();
         Scanner scanner = new Scanner(file);
@@ -127,7 +127,7 @@ public class Controller {
      * @param path The path of the file that will be saved to
      * @param text The string that will be saved to the file
      */
-    static void saveToFile(String path, String text) throws IOException {
+    void saveToFile(String path, String text) throws IOException {
         FileWriter fileWriter = new FileWriter(path);
         fileWriter.write(text);
         fileWriter.close();
@@ -141,7 +141,7 @@ public class Controller {
      * @param text The string that will be counted
      * @return The total word count
      */
-    static int wordCounter(String text){
+    int wordCounter(String text){
         int wordCount = 0;
         Scanner scanner = new Scanner(text);
         while (scanner.hasNext()&& text.length() > 0) {

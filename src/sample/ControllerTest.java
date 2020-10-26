@@ -7,41 +7,42 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ControllerTest {
+    Controller controller = new Controller();
     //----------- Base64 Converter --------
     @DisplayName("Test if base64Decode returns plain text")
     @Test
     void base64DecodeTest(){
-        assertEquals("TestString", Controller.base64Decode("VGVzdFN0cmluZw=="));
+        assertEquals("TestString", controller.base64Decode("VGVzdFN0cmluZw=="));
     }
     @DisplayName("Test if base64Encode returns base64 encoded string")
     @Test
     void base64EncodeTest(){
-        assertEquals("VGVzdFN0cmluZw==", Controller.base64Encode("TestString"));
+        assertEquals("VGVzdFN0cmluZw==", controller.base64Encode("TestString"));
     }
     //----------- Web Browser ------------
     @DisplayName("Test if search returns the right url")
     @Test
     void searchTest(){
-        assertEquals("https://google.se", Controller.search("google.se"));
-        assertEquals("https://www.bing.com/search?q=korv", Controller.search("korv"));
-        assertEquals("https://youtube.com", Controller.search("https://youtube.com"));
+        assertEquals("https://google.se", controller.search("google.se"));
+        assertEquals("https://www.bing.com/search?q=korv", controller.search("korv"));
+        assertEquals("https://youtube.com", controller.search("https://youtube.com"));
     }
     //----------- Text Editor ------------
     @DisplayName("Test if wordCounter counts correctly")
     @Test
     void wordCounterTest(){
-        assertEquals(3,Controller.wordCounter("Hej på dig"));
+        assertEquals(3,controller.wordCounter("Hej på dig"));
     }
     @DisplayName("Test if file loads correctly")
     @Test
     void loadFileTest() throws FileNotFoundException {
         assertEquals("Hej\n" + "Detta\n" + "Är\n" + "Ett\n" + "Test\n"
-                , Controller.loadFile("testData/TestFile1.txt"));
+                , controller.loadFile("testData/TestFile1.txt"));
     }
     @DisplayName("Test if file saves correctly")
     @Test
     void saveToFileTest() throws IOException {
-        Controller.saveToFile("testData/TestFile2.txt","Test123\nTest");
-        assertEquals("Test123\n" + "Test\n", Controller.loadFile("testData/TestFile2.txt"));
+        controller.saveToFile("testData/TestFile2.txt","Test123\nTest");
+        assertEquals("Test123\n" + "Test\n", controller.loadFile("testData/TestFile2.txt"));
     }
 }
