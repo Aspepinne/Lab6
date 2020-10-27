@@ -5,17 +5,20 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="350.0" maxWidth="250.0" minWidth="-Infinity" prefHeight="350.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <children>
-      <Button layoutX="66.0" layoutY="152.0" mnemonicParsing="false" onAction="#webBrowserButtonClicked" prefHeight="26.0" prefWidth="110.0" text="Web Browser" />
-      <Button layoutX="65.0" layoutY="252.0" mnemonicParsing="false" onAction="#base64ConverterButtonClicked" prefHeight="26.0" prefWidth="110.0" text="Base64 Converter" />
-      <Button layoutX="66.0" layoutY="201.0" mnemonicParsing="false" onAction="#textEditorButtonClicked" prefHeight="26.0" prefWidth="110.0" text="Text Editor" />
+<AnchorPane maxHeight="350.0" maxWidth="250.0" minWidth="-Infinity" prefHeight="350.0" prefWidth="250.0"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+      <Button layoutX="66.0" layoutY="152.0" mnemonicParsing="false" onAction="#webBrowserButtonClicked"
+              prefHeight="26.0" prefWidth="110.0" text="Web Browser" />
+      <Button layoutX="65.0" layoutY="252.0" mnemonicParsing="false" onAction="#base64ConverterButtonClicked"
+              prefHeight="26.0" prefWidth="110.0" text="Base64 Converter" />
+      <Button layoutX="66.0" layoutY="201.0" mnemonicParsing="false" onAction="#textEditorButtonClicked"
+              prefHeight="26.0" prefWidth="110.0" text="Text Editor" />
       <Label layoutX="72.0" layoutY="64.0" prefHeight="34.0" prefWidth="110.0" text="Wellcome">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
       <Label layoutX="63.0" layoutY="107.0" prefHeight="34.0" prefWidth="128.0" text="Please select a program" />
-   </children>
-   
+
 </AnchorPane>

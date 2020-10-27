@@ -82,7 +82,7 @@ public class Controller {
     }
     /**
      * Takes a string and returns a usable url
-     * @param url The string
+     * @param url Becomes a usable url
      * @return  The usable url
      */
     String search(String url){

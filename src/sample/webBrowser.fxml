@@ -5,10 +5,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
 
-      <WebView id="webView" fx:id="webView" layoutX="13.0" layoutY="60.0" prefHeight="326.0" prefWidth="574.0" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="60.0" />
-      <TextField id="adressBar" fx:id="adressBar" alignment="TOP_LEFT" layoutX="14.0" layoutY="22.0" onKeyPressed="#searchWithEnter" prefHeight="26.0" prefWidth="470.0" promptText="Enter a url or search word here" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="115.60000000000002" AnchorPane.topAnchor="22.0" />
-      <Button id="searchButton" fx:id="searchButton" alignment="TOP_LEFT" layoutX="512.0" layoutY="23.0" mnemonicParsing="false" onAction="#searchButtonClick" text="Search" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="23.0" />
+      <WebView id="webView" fx:id="webView" layoutX="13.0" layoutY="60.0" prefHeight="326.0" prefWidth="574.0"
+               AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="13.0"
+               AnchorPane.topAnchor="60.0" />
+      <TextField id="adressBar" fx:id="adressBar" alignment="TOP_LEFT" layoutX="14.0" layoutY="22.0" onKeyPressed="#searchWithEnter"
+                 prefHeight="26.0" prefWidth="470.0" promptText="Enter a url or search word here" AnchorPane.leftAnchor="14.0"
+                 AnchorPane.rightAnchor="115.6" AnchorPane.topAnchor="22.0" />
+      <Button id="searchButton" alignment="TOP_LEFT" layoutX="512.0" layoutY="23.0" mnemonicParsing="false"
+              onAction="#searchButtonClick" text="Search" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="23.0" />
    
 </AnchorPane>

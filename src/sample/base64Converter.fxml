@@ -7,20 +7,23 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <children>
-      <TextArea fx:id="textArea" layoutX="14.0" layoutY="100.0" prefHeight="254.0" prefWidth="568.0" promptText="Enter text or base64 here" AnchorPane.bottomAnchor="45.599999999999994" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="99.99999999999997" />
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+      <TextArea fx:id="textArea" layoutX="14.0" layoutY="100.0" prefHeight="254.0" prefWidth="568.0" promptText="Enter text or base64 here"
+                AnchorPane.bottomAnchor="45.6" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="100.0" />
       <Label id="labelText" fx:id="labelText" layoutX="14.0" layoutY="27.0" text="Text to Base64" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="27.0">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Button layoutX="484.0" layoutY="27.0" mnemonicParsing="false" onAction="#convertButtonClicked" prefHeight="26.0" prefWidth="90.0" text="Convert" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="27.0" />
-      <CheckBox fx:id="checkBox" layoutX="484.0" layoutY="66.0" mnemonicParsing="false" onAction="#checkBoxClicked" text="Base64 to Text" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="66.0">
+      <Button layoutX="484.0" layoutY="27.0" mnemonicParsing="false" onAction="#convertButtonClicked" prefHeight="26.0" prefWidth="90.0"
+              text="Convert" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="27.0" />
+      <CheckBox fx:id="checkBox" layoutX="484.0" layoutY="66.0" mnemonicParsing="false" onAction="#checkBoxClicked" text="Base64 to Text"
+                AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="66.0">
          <font>
             <Font size="10.0" />
          </font>
       </CheckBox>
-   </children>
    
 </AnchorPane>
