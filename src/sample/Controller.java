@@ -78,14 +78,14 @@ public class Controller {
     }
     public void searchButtonClick() {
         String url = adressBar.getText();
-        webView.getEngine().load(search(url));
+        webView.getEngine().load(setUrl(url));
     }
     /**
      * Takes a string and returns a usable url
      * @param url Becomes a usable url
      * @return  The usable url
      */
-    String search(String url){
+    String setUrl(String url){
         if (!url.contains(".") || url.endsWith(".")) {
             url = "https://www.bing.com/search?q=" + url;
         } else if (!url.startsWith("https://")) {
@@ -176,6 +176,3 @@ public class Controller {
         newWindow.show();
     }
 }
-
-
-

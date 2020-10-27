@@ -20,12 +20,12 @@ class ControllerTest {
         assertEquals("VGVzdFN0cmluZw==", controller.base64Encode("TestString"));
     }
     //----------- Web Browser ------------
-    @DisplayName("Test if search returns the right url")
+    @DisplayName("Test if setUrl returns the right url")
     @Test
-    void searchTest(){
-        assertEquals("https://google.se", controller.search("google.se"));
-        assertEquals("https://www.bing.com/search?q=korv", controller.search("korv"));
-        assertEquals("https://youtube.com", controller.search("https://youtube.com"));
+    void setUrlTest(){
+        assertEquals("https://google.se", controller.setUrl("google.se"));
+        assertEquals("https://www.bing.com/search?q=korv", controller.setUrl("korv"));
+        assertEquals("https://youtube.com", controller.setUrl("https://youtube.com"));
     }
     //----------- Text Editor ------------
     @DisplayName("Test if wordCounter counts correctly")
