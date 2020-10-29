@@ -13,8 +13,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Base64;
-import java.util.Scanner;
+import java.util.*;
 
 public class Controller {
 
@@ -91,6 +90,21 @@ public class Controller {
         } else if (!url.startsWith("https://")) {
             url = "https://" + url;
         }
+
+
+        /*
+        test
+         */
+
+
+        int testInt;
+
+
+
+        /*
+        test end
+         */
+
         return url;
     }
     //------------------------ Text Editor -------------------------
@@ -149,6 +163,31 @@ public class Controller {
             wordCount++;
         }
         return wordCount;
+    }
+    public void sortButtonPressed(){
+        String text = textEditorArea.getText();
+        textEditorArea.setText(sortAlphabeticalOrder(text));
+    }
+    /**
+     * Takes in a string and sort the words in alphabetical order
+     * @param text The string that will be sorted
+     * @return The sorted string
+     */
+    String sortAlphabeticalOrder(String text){
+        ArrayList<String> words = new ArrayList<>();
+        Scanner scanner = new Scanner(text);
+        while (scanner.hasNext()) {
+            words.add(scanner.next());
+        }
+        String[] sortedList = words
+                .stream()
+                .sorted(String::compareToIgnoreCase)
+                .toArray(String[]::new);
+        StringBuilder stringBuilder = new StringBuilder();
+        for (String wordInList : sortedList) {
+            stringBuilder.append(wordInList).append(" ");
+        }
+        return stringBuilder.toString();
     }
     //------------------------ Launcher ----------------------------
     public void webBrowserButtonClicked() throws IOException {

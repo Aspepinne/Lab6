@@ -4,6 +4,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ControllerTest {
@@ -44,5 +47,10 @@ class ControllerTest {
     void saveToFileTest() throws IOException {
         controller.saveToFile("testData/TestFile2.txt","Test123\nTest");
         assertEquals("Test123\n" + "Test\n", controller.loadFile("testData/TestFile2.txt"));
+    }
+    @DisplayName("Test if sortAlphabeticalOrder sorts correctly")
+    @Test
+    void sortAlphabeticalOrderTest(){
+        assertEquals("Adam Bertil Carl ", controller.sortAlphabeticalOrder("Bertil Carl Adam"));
     }
 }
