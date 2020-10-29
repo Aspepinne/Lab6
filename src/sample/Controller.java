@@ -90,21 +90,6 @@ public class Controller {
         } else if (!url.startsWith("https://")) {
             url = "https://" + url;
         }
-
-
-        /*
-        test
-         */
-
-
-        int testInt;
-
-
-
-        /*
-        test end
-         */
-
         return url;
     }
     //------------------------ Text Editor -------------------------
